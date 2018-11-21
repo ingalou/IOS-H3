@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1800BA9221A613E700DCD7FC /* GrecTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */; };
+		1800BA9421A6143C00DCD7FC /* grecPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800BA9321A6143C00DCD7FC /* grecPageViewController.swift */; };
 		18278EBD21A2BD7000BD6B49 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18278EBC21A2BD7000BD6B49 /* CoreLocation.framework */; };
 		18278EBF21A2D90A00BD6B49 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */; };
-		18278EC321A2E4B300BD6B49 /* GrecTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18278EC221A2E4B300BD6B49 /* GrecTableViewCell.swift */; };
 		18278EC521A3008C00BD6B49 /* Grec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18278EC421A3008C00BD6B49 /* Grec.swift */; };
 		18278EC821A31CBE00BD6B49 /* FetchGrec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18278EC721A31CBE00BD6B49 /* FetchGrec.swift */; };
 		1888CC2F219D85A60048B648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888CC2E219D85A60048B648 /* AppDelegate.swift */; };
@@ -23,9 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrecTableViewCell.swift; sourceTree = "<group>"; };
+		1800BA9321A6143C00DCD7FC /* grecPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grecPageViewController.swift; sourceTree = "<group>"; };
 		18278EBC21A2BD7000BD6B49 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
-		18278EC221A2E4B300BD6B49 /* GrecTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrecTableViewCell.swift; sourceTree = "<group>"; };
 		18278EC421A3008C00BD6B49 /* Grec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grec.swift; sourceTree = "<group>"; };
 		18278EC721A31CBE00BD6B49 /* FetchGrec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGrec.swift; sourceTree = "<group>"; };
 		1888CC2B219D85A60048B648 /* Ios h3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios h3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +82,8 @@
 				1888CC30219D85A60048B648 /* ViewController.swift */,
 				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
 				18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */,
-				18278EC221A2E4B300BD6B49 /* GrecTableViewCell.swift */,
+				1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */,
+				1800BA9321A6143C00DCD7FC /* grecPageViewController.swift */,
 				1888CC32219D85A60048B648 /* Main.storyboard */,
 				1888CC35219D85A70048B648 /* Assets.xcassets */,
 				18278EC421A3008C00BD6B49 /* Grec.swift */,
@@ -251,11 +254,12 @@
 			files = (
 				1888CC31219D85A60048B648 /* ViewController.swift in Sources */,
 				18278EBF21A2D90A00BD6B49 /* RankingViewController.swift in Sources */,
-				18278EC321A2E4B300BD6B49 /* GrecTableViewCell.swift in Sources */,
 				18278EC521A3008C00BD6B49 /* Grec.swift in Sources */,
 				1888CC2F219D85A60048B648 /* AppDelegate.swift in Sources */,
+				1800BA9421A6143C00DCD7FC /* grecPageViewController.swift in Sources */,
 				18278EC821A31CBE00BD6B49 /* FetchGrec.swift in Sources */,
 				A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */,
+				1800BA9221A613E700DCD7FC /* GrecTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

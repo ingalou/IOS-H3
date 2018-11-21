@@ -14,6 +14,8 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
 //    a mettre dans l'action pour trier ( créer une fonction avec hygiene en param)
 //    self.grecs = self.grecs.sorted(by: { $1.hygiene > $0.hygiene })
 //    self.tableView.reloadData()
@@ -64,7 +66,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //hauteur de ligne
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt index: IndexPath) {
