@@ -10,11 +10,26 @@ import UIKit
 
 class Grec: NSObject {
     var title: String = ""
+    var address: String = ""
+    var city: String = ""
+    var latitude: Int = 0
+    var longitude: Int = 0
+    var accueil: Int = 0
+    var hygiene: Int = 0
+    var sauce: Int = 0
+    var viande: Int = 0
+    var frite: Int = 0
+    var pain: Int = 0
+    var crudite: Int = 0
+    var quantite: Int = 0
+    var qualitePrix: Int = 0
+    var moyenne: Int = 0
+    var prix: Int = 0
     
     init(dico: [String : Any]  ) {
         
         self.title = dico["Nom"] as! String
-        print("AAAAAAAAAAAAAAAA \(self.title)")
+        self.hygiene = dico["Hygiène"] as! Int
         
     }
 }
