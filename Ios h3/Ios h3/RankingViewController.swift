@@ -14,6 +14,10 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+//    a mettre dans l'action pour trier ( créer une fonction avec hygiene en param)
+//    self.grecs = self.grecs.sorted(by: { $1.hygiene > $0.hygiene })
+//    self.tableView.reloadData()
+    
     var grecs: [Grec] = [Grec]()
     
     override func viewDidLoad() {
