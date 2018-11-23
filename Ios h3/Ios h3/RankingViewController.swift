@@ -58,6 +58,8 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         print("fuyqeufguygsudyfgsqduygqdsuyfgsuyguqiygf \(grecs)")
         cell.grecTitle.text = grecs[indexPath.row].title
+        cell.grecPlace.text = grecs[indexPath.row].city
+        cell.grecGrade.text = grecs[indexPath.row].moyenne.description
         
         cell.grecArrow.layer.cornerRadius = cell.grecArrow.frame.height/2
         cell.grecArrow.clipsToBounds = true

@@ -13,9 +13,9 @@ final class GrecAnnotation: NSObject,  MKAnnotation{
     
     var coordinate: CLLocationCoordinate2D
     var title: String?
-    var moyenne: Int?
+    var moyenne: Double?
     
-    init(coordinate:CLLocationCoordinate2D, title:String? ,moyenne: Int?){
+    init(coordinate:CLLocationCoordinate2D, title:String? ,moyenne: Double?){
         self.coordinate = coordinate
         self.title = title
         self.moyenne = moyenne

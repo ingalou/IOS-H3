@@ -13,7 +13,7 @@ import Firebase
 
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate{
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -39,8 +39,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         }
         
         super.viewDidLoad()
+
+        mapView.delegate = self
+
         // Do any additional setup after loading the view, typically from a nib.
         manager.delegate = self
+        
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
@@ -59,24 +63,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         
     }
     
-}
-
-extension ViewController: MKMapViewDelegate{
-    
     func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
-        if let grecAnnotationView
-            = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
-            grecAnnotationView.animatesWhenAdded = true
-            grecAnnotationView.titleVisibility = .adaptive
-            
-            return grecAnnotationView
-            
-            // .image custom image
-            // accessory button
-            
-            
-        }
-        return nil
+        let grecAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as! MKMarkerAnnotationView
+        grecAnnotationView.animatesWhenAdded = true
+        grecAnnotationView.titleVisibility = .adaptive
+        grecAnnotationView.canShowCallout = true
+        grecAnnotationView.isEnabled = true
+        
+        let btn = UIButton(type: .detailDisclosure)
+        grecAnnotationView.rightCalloutAccessoryView = btn
+        
+        return grecAnnotationView
+        
+        // .image custom image
+        // accessory button
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
     }
 }
-
