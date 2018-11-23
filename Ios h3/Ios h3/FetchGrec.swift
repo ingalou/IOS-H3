@@ -15,7 +15,6 @@ class FetchGrec: NSObject {
         let db = Firestore.firestore()
         var grecs: [Grec] = [Grec]()
         
-        
         db.collection("kebabs").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -32,5 +31,28 @@ class FetchGrec: NSObject {
         }
     }
     
+    
+    func fetchId(id: Int, completionHandler: @escaping ([Grec])->Void ){
+        let db = Firestore.firestore()
+        var grecs: [Grec] = [Grec]()
+        
+        
+       db.collection("kebabs").whereField("ID", isEqualTo: id).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let dictio = document.data()
+                    let grec = Grec(dico: dictio)
+                    grecs.append(grec)
+                    
+                }
+            }
+            completionHandler(grecs)
+            
+        }
+    }
+
 }
+    
 

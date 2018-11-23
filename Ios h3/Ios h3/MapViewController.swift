@@ -11,8 +11,6 @@ import MapKit
 import CoreLocation
 import Firebase
 
-
-
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -20,7 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     let manager = CLLocationManager()
     var grecs: [Grec] = [Grec]()
-
+    
     
     override func viewDidLoad() {
         
@@ -32,16 +30,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             for grec in self.grecs{
                 print(grec.title)
                 let grecCoord = CLLocationCoordinate2D(latitude: grec.latitude, longitude: grec.longitude)
-                let grecAnnotation = GrecAnnotation(coordinate: grecCoord, title: grec.title, moyenne: grec.moyenne)
+                let grecAnnotation = GrecAnnotation(coordinate: grecCoord, title: grec.title, moyenne: grec.moyenne, id: grec.id)
                 self.mapView.addAnnotation((grecAnnotation))
                 
             }
         }
         
         super.viewDidLoad()
-
+        
         mapView.delegate = self
-
+        
         // Do any additional setup after loading the view, typically from a nib.
         manager.delegate = self
         
@@ -64,23 +62,64 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
-        let grecAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as! MKMarkerAnnotationView
-        grecAnnotationView.animatesWhenAdded = true
-        grecAnnotationView.titleVisibility = .adaptive
-        grecAnnotationView.canShowCallout = true
-        grecAnnotationView.isEnabled = true
         
-        let btn = UIButton(type: .detailDisclosure)
-        grecAnnotationView.rightCalloutAccessoryView = btn
-        
-        return grecAnnotationView
-        
-        // .image custom image
-        // accessory button
-        
+        if let _ = annotation as? MKUserLocation {
+            
+        } else {
+            
+            let grecAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as! MKMarkerAnnotationView
+            
+            grecAnnotationView.animatesWhenAdded = true
+            grecAnnotationView.titleVisibility = .adaptive
+            grecAnnotationView.canShowCallout = true
+            grecAnnotationView.isEnabled = true
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            button.setImage(UIImage(named: "arrow"), for: .normal)
+            
+            
+            
+            if let grecAnnotation = annotation as? GrecAnnotation{
+                
+                let moyenne = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+                moyenne.textColor = UIColor(displayP3Red: 238/255, green: 101/255, blue: 101/255, alpha: 1.0)
+                moyenne.font = UIFont.systemFont(ofSize: 20)
+                if let realMoyenne = grecAnnotation.moyenne {
+                    moyenne.text = String(format: "%0.1f", realMoyenne)
+                }
+                
+                grecAnnotationView.leftCalloutAccessoryView = moyenne
+            }
+            
+            
+            grecAnnotationView.rightCalloutAccessoryView = button
+            
+            
+            //
+            //
+            //            //PUSH
+            //            navigationController?.pushViewController(detailViewController, animated: true)
+            
+            
+            return grecAnnotationView
+            
+        }
+        return nil
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        
+        if let grecAnnotation = view.annotation as? GrecAnnotation{
+            if let id = grecAnnotation.id {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let grecPageViewController = storyboard.instantiateViewController(withIdentifier: "GrecPageViewController") as! GrecPageViewController
+                grecPageViewController.id = id
+                
+                navigationController?.pushViewController(grecPageViewController, animated: true)
+                
+            }
+            
+        }
         
     }
 }

@@ -9,13 +9,31 @@
 import UIKit
 
 class GrecPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var grecTitle: UILabel!
+
+    
+
+    
+    var id: Int = 0
+    var grecs: [Grec] = [Grec]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        print("IDIDIDIDIDIIDDI\(id)")
+        let fetchGrec = FetchGrec()
+        fetchGrec.fetchId(id: id) { (grecsfromDB) in
+            self.grecs = grecsfromDB
+            print(self.grecs)
+            self.grecTitle.text = self.grecs[0].title
+            
+        }
+       
+        
         
         // Do any additional setup after loading the view.
     }

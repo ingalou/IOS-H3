@@ -43,7 +43,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //le nombre d'éléments qu'il y a dans le tableau
-        
         return grecs.count
     }
     
@@ -58,7 +57,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.grecTitle.text = grecs[indexPath.row].title
         cell.grecPlace.text = grecs[indexPath.row].city
         cell.grecGrade.text = grecs[indexPath.row].moyenne.description
-        
         cell.grecArrow.layer.cornerRadius = cell.grecArrow.frame.height/2
         cell.grecArrow.clipsToBounds = true
         cell.grecArrow.setTitleColor(UIColor.red, for: [])

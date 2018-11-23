@@ -47,12 +47,6 @@ class GrecTableViewCell: UITableViewCell {
         grecGrade.textAlignment = .center
         grecGrade.layer.cornerRadius = grecGrade.frame.height/2
         
-       
-        
-        
-        
-        
-
     }
     
     override func layoutSubviews() {
