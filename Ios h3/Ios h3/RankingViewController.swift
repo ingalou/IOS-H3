@@ -31,7 +31,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let fetchGrec = FetchGrec()
         fetchGrec.fetch { (grecsfromDB) in
-            print(grecsfromDB)
             self.grecs = grecsfromDB
             self.tableView.reloadData()
             
@@ -56,7 +55,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "grecCell", for: indexPath) as! GrecTableViewCell
         //avec as! on change le type en forcastant car les labels sont MovieTableViewCell
         
-        print("fuyqeufguygsudyfgsqduygqdsuyfgsuyguqiygf \(grecs)")
         cell.grecTitle.text = grecs[indexPath.row].title
         cell.grecPlace.text = grecs[indexPath.row].city
         cell.grecGrade.text = grecs[indexPath.row].moyenne.description

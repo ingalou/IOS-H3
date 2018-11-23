@@ -28,7 +28,7 @@ class FetchGrec: NSObject {
                 }
             }
             completionHandler(grecs)
-            print(grecs.count)
+            
         }
     }
     

@@ -17,8 +17,10 @@
 		1888CC36219D85A70048B648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1888CC35219D85A70048B648 /* Assets.xcassets */; };
 		1888CC39219D85A70048B648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888CC37219D85A70048B648 /* LaunchScreen.storyboard */; };
 		18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5B9821A702E400A57419 /* GrecAnnotation.swift */; };
+		18AE5BA321A84C9800A57419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5BA221A84C9800A57419 /* ViewController.swift */; };
+		18AE5BA521A8537000A57419 /* GrecPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5BA421A8537000A57419 /* GrecPageViewController.swift */; };
+		18AE5BA721A859B900A57419 /* GrecGradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5BA621A859B900A57419 /* GrecGradesTableViewCell.swift */; };
 		18C7ADD8219DAA920069F3D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */; };
-		725A67DB21A818EB004FA3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A67DA21A818EB004FA3E8 /* ViewController.swift */; };
 		A06F49FA6A3522D652BAF4CC /* Pods_Ios_h3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8CAA51F473E247EF14A1A8 /* Pods_Ios_h3.framework */; };
 		A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F96D9921A573FD00BDAE3B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,11 +38,13 @@
 		1888CC38219D85A70048B648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1888CC3A219D85A70048B648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18AE5B9821A702E400A57419 /* GrecAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrecAnnotation.swift; sourceTree = "<group>"; };
+		18AE5BA221A84C9800A57419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18AE5BA421A8537000A57419 /* GrecPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrecPageViewController.swift; sourceTree = "<group>"; };
+		18AE5BA621A859B900A57419 /* GrecGradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrecGradesTableViewCell.swift; sourceTree = "<group>"; };
 		18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E0F6F8EC6B23A83C6341135 /* Pods-Ios h3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.debug.xcconfig"; sourceTree = "<group>"; };
 		2ED7F32D9AC891995889994D /* Pods-Ios h3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.release.xcconfig"; sourceTree = "<group>"; };
 		5C8CAA51F473E247EF14A1A8 /* Pods_Ios_h3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_h3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		725A67DA21A818EB004FA3E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../.Trash/ViewController.swift; sourceTree = "<group>"; };
 		A1F96D9921A573FD00BDAE3B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,15 +82,17 @@
 		1888CC2D219D85A60048B648 /* Ios h3 */ = {
 			isa = PBXGroup;
 			children = (
-				725A67DA21A818EB004FA3E8 /* ViewController.swift */,
 				1888CC2E219D85A60048B648 /* AppDelegate.swift */,
 				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
 				18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */,
 				1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */,
+				18AE5BA221A84C9800A57419 /* ViewController.swift */,
 				1888CC32219D85A60048B648 /* Main.storyboard */,
 				1888CC35219D85A70048B648 /* Assets.xcassets */,
 				18278EC421A3008C00BD6B49 /* Grec.swift */,
 				A1F96D9921A573FD00BDAE3B /* MapViewController.swift */,
+				18AE5BA421A8537000A57419 /* GrecPageViewController.swift */,
+				18AE5BA621A859B900A57419 /* GrecGradesTableViewCell.swift */,
 				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
 				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,
@@ -255,10 +261,12 @@
 				18278EBF21A2D90A00BD6B49 /* RankingViewController.swift in Sources */,
 				18278EC521A3008C00BD6B49 /* Grec.swift in Sources */,
 				1888CC2F219D85A60048B648 /* AppDelegate.swift in Sources */,
+				18AE5BA521A8537000A57419 /* GrecPageViewController.swift in Sources */,
 				18278EC821A31CBE00BD6B49 /* FetchGrec.swift in Sources */,
 				18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */,
+				18AE5BA721A859B900A57419 /* GrecGradesTableViewCell.swift in Sources */,
 				A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */,
-				725A67DB21A818EB004FA3E8 /* ViewController.swift in Sources */,
+				18AE5BA321A84C9800A57419 /* ViewController.swift in Sources */,
 				1800BA9221A613E700DCD7FC /* GrecTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

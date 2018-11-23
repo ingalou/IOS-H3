@@ -9,6 +9,7 @@
 import UIKit
 
 class Grec: NSObject {
+    var id: Int = 0
     var title: String = ""
     var address: String = ""
     var city: String = ""
@@ -27,6 +28,9 @@ class Grec: NSObject {
     var prix: Int = 0
     
     init(dico: [String : Any]  ) {
+        if let id = dico["ID"] as? Int {
+            self.id = id
+        }
         if let title = dico["Nom"] as? String {
             self.title = title
         }
