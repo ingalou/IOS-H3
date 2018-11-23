@@ -23,7 +23,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
 
     
     override func viewDidLoad() {
-        FirebaseApp.configure()
+        
         
         let fetchGrec = FetchGrec()
         fetchGrec.fetch { (grecsfromDB) in
@@ -68,9 +68,12 @@ extension ViewController: MKMapViewDelegate{
             = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
             grecAnnotationView.animatesWhenAdded = true
             grecAnnotationView.titleVisibility = .adaptive
-            grecAnnotationView.titleVisibility = .adaptive
             
             return grecAnnotationView
+            
+            // .image custom image
+            // accessory button
+            
             
         }
         return nil

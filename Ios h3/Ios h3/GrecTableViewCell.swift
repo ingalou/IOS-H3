@@ -35,6 +35,7 @@ class GrecTableViewCell: UITableViewCell {
         
         
         grecPlace.font = UIFont.systemFont(ofSize: 11)
+        grecTitle.font = UIFont.boldSystemFont(ofSize: 14)
         grecPlace.textColor = grey
         
         
@@ -46,12 +47,10 @@ class GrecTableViewCell: UITableViewCell {
         grecGrade.textAlignment = .center
         grecGrade.layer.cornerRadius = grecGrade.frame.height/2
         
-        grecArrow.setTitleColor(red, for: [])
-        grecArrow.layer.borderWidth = 1
-        grecArrow.layer.borderColor = red.cgColor
-        grecArrow.frame.size.width = grecArrow.intrinsicContentSize.width + 10
-        grecArrow.frame.size.height = grecArrow.frame.size.width
-        grecArrow.layer.cornerRadius = grecArrow.frame.height/2
+       
+        
+        
+        
         
 
     }

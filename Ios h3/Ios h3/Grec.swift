@@ -29,7 +29,7 @@ class Grec: NSObject {
     init(dico: [String : Any]  ) {
         
         self.title = dico["Nom"] as! String
-        self.hygiene = dico["Hygiène"] as! Int
+        self.hygiene = dico["Hygiene"] as! Int
         self.latitude = dico["Latitude"] as! Double
         self.longitude = dico["Longitude"] as! Double
         

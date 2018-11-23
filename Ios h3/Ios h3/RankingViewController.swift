@@ -59,7 +59,13 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("fuyqeufguygsudyfgsqduygqdsuyfgsuyguqiygf \(grecs)")
         cell.grecTitle.text = grecs[indexPath.row].title
         
-        
+        cell.grecArrow.layer.cornerRadius = cell.grecArrow.frame.height/2
+        cell.grecArrow.clipsToBounds = true
+        cell.grecArrow.setTitleColor(UIColor.red, for: [])
+        cell.grecArrow.layer.borderWidth = 1
+        cell.grecArrow.layer.borderColor = UIColor.red.cgColor
+        cell.grecArrow.frame.size.width = cell.grecArrow.intrinsicContentSize.width + 10
+        cell.grecArrow.frame.size.height = cell.grecArrow.frame.size.width
         
         return cell
     }
