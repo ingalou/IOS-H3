@@ -222,7 +222,9 @@
                         <viewLayoutGuide key="safeArea" id="2nR-SN-RIa"/>
                     </view>
                     <connections>
+                        <outlet property="adresse" destination="Ed1-ow-Kfm" id="XgR-Wy-EEk"/>
                         <outlet property="grecTitle" destination="GAz-NQ-xr6" id="G9Y-mk-jv9"/>
+                        <outlet property="moyenne" destination="SFj-bT-OGd" id="R3t-KX-B0r"/>
                         <outlet property="tableView" destination="Wdx-kY-KXe" id="7KH-09-mBg"/>
                     </connections>
                 </viewController>

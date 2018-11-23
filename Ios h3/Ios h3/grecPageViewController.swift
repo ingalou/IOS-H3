@@ -12,6 +12,8 @@ class GrecPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var grecTitle: UILabel!
+    @IBOutlet weak var moyenne: UILabel!
+    @IBOutlet weak var adresse: UILabel!
 
     
 
@@ -30,6 +32,8 @@ class GrecPageViewController: UIViewController, UITableViewDelegate, UITableView
             self.grecs = grecsfromDB
             print(self.grecs)
             self.grecTitle.text = self.grecs[0].title
+            self.moyenne.text = String(format: "%0.1f", self.grecs[0].moyenne)
+            self.adresse.text = self.grecs[0].address
             
         }
        
