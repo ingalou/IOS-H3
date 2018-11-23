@@ -12,8 +12,8 @@ class Grec: NSObject {
     var title: String = ""
     var address: String = ""
     var city: String = ""
-    var latitude: Int = 0
-    var longitude: Int = 0
+    var latitude: Double = 0
+    var longitude: Double = 0
     var accueil: Int = 0
     var hygiene: Int = 0
     var sauce: Int = 0
@@ -30,6 +30,10 @@ class Grec: NSObject {
         
         self.title = dico["Nom"] as! String
         self.hygiene = dico["Hygiène"] as! Int
+        self.latitude = dico["Latitude"] as! Double
+        self.longitude = dico["Longitude"] as! Double
         
     }
 }
+
+

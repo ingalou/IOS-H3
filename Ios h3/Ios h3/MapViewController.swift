@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 
 
@@ -18,8 +19,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
     
     
     let manager = CLLocationManager()
+    var grecs: [Grec] = [Grec]()
+
     
     override func viewDidLoad() {
+        FirebaseApp.configure()
+        
+        let fetchGrec = FetchGrec()
+        fetchGrec.fetch { (grecsfromDB) in
+            print(grecsfromDB)
+            self.grecs = grecsfromDB
+            for grec in self.grecs{
+                print(grec.title)
+                let grecCoord = CLLocationCoordinate2D(latitude: grec.latitude, longitude: grec.longitude)
+                let grecAnnotation = GrecAnnotation(coordinate: grecCoord, title: grec.title, moyenne: grec.moyenne)
+                self.mapView.addAnnotation((grecAnnotation))
+                
+            }
+        }
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         manager.delegate = self
@@ -28,6 +46,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         manager.startUpdatingLocation()
         
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
@@ -40,6 +59,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         
     }
     
+}
+
+extension ViewController: MKMapViewDelegate{
     
+    func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
+        if let grecAnnotationView
+            = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+            grecAnnotationView.animatesWhenAdded = true
+            grecAnnotationView.titleVisibility = .adaptive
+            grecAnnotationView.titleVisibility = .adaptive
+            
+            return grecAnnotationView
+            
+        }
+        return nil
+    }
 }
 

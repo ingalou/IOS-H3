@@ -12,7 +12,6 @@ import Firebase
 class FetchGrec: NSObject {
     
     func fetch(completionHandler: @escaping ([Grec])->Void ){
-        FirebaseApp.configure()
         let db = Firestore.firestore()
         var grecs: [Grec] = [Grec]()
         
@@ -20,26 +19,15 @@ class FetchGrec: NSObject {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-               
                 for document in querySnapshot!.documents {
-                    print(" thomas \(document.documentID) => \(document.data())")
-                    var dictio = document.data()
-                    print(dictio)
-                    print(document.data()["Nom"])
+                    let dictio = document.data()
                     let grec = Grec(dico: dictio)
-                    print("ingal \(grec)")
                     grecs.append(grec)
-                    
-                    
                 }
-                
             }
-            
             completionHandler(grecs)
-            
         }
-        
-        
-            }
-        }
+    }
+    
+}
 

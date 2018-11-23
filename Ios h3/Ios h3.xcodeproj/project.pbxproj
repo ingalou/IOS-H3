@@ -18,6 +18,20 @@
 		1888CC34219D85A60048B648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888CC32219D85A60048B648 /* Main.storyboard */; };
 		1888CC36219D85A70048B648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1888CC35219D85A70048B648 /* Assets.xcassets */; };
 		1888CC39219D85A70048B648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888CC37219D85A70048B648 /* LaunchScreen.storyboard */; };
+		18AE5B8C21A6A24800A57419 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8021A6A24800A57419 /* SF-Pro-Text-LightItalic.otf */; };
+		18AE5B8D21A6A24800A57419 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8121A6A24800A57419 /* SF-Pro-Text-MediumItalic.otf */; };
+		18AE5B8E21A6A24800A57419 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8221A6A24800A57419 /* SF-Pro-Text-Heavy.otf */; };
+		18AE5B8F21A6A24800A57419 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8321A6A24800A57419 /* SF-Pro-Text-SemiboldItalic.otf */; };
+		18AE5B9021A6A24800A57419 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8421A6A24800A57419 /* SF-Pro-Text-Light.otf */; };
+		18AE5B9121A6A24800A57419 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8521A6A24800A57419 /* SF-Pro-Text-Regular.otf */; };
+		18AE5B9221A6A24800A57419 /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8621A6A24800A57419 /* SF-Pro-Text-HeavyItalic.otf */; };
+		18AE5B9321A6A24800A57419 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8721A6A24800A57419 /* SF-Pro-Text-RegularItalic.otf */; };
+		18AE5B9421A6A24800A57419 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8821A6A24800A57419 /* SF-Pro-Text-Medium.otf */; };
+		18AE5B9521A6A24800A57419 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8921A6A24800A57419 /* SF-Pro-Text-Semibold.otf */; };
+		18AE5B9621A6A24800A57419 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8A21A6A24800A57419 /* SF-Pro-Text-Bold.otf */; };
+		18AE5B9721A6A24800A57419 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AE5B8B21A6A24800A57419 /* SF-Pro-Text-BoldItalic.otf */; };
+		18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5B9821A702E400A57419 /* GrecAnnotation.swift */; };
+		18AE5BA121A7657300A57419 /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5BA021A7657300A57419 /* GradesTableViewController.swift */; };
 		18C7ADD8219DAA920069F3D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */; };
 		A06F49FA6A3522D652BAF4CC /* Pods_Ios_h3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8CAA51F473E247EF14A1A8 /* Pods_Ios_h3.framework */; };
 		A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F96D9921A573FD00BDAE3B /* MapViewController.swift */; };
@@ -37,6 +51,20 @@
 		1888CC35219D85A70048B648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1888CC38219D85A70048B648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1888CC3A219D85A70048B648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18AE5B8021A6A24800A57419 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-LightItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		18AE5B8121A6A24800A57419 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-MediumItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		18AE5B8221A6A24800A57419 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Heavy.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		18AE5B8321A6A24800A57419 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-SemiboldItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		18AE5B8421A6A24800A57419 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		18AE5B8521A6A24800A57419 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		18AE5B8621A6A24800A57419 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-HeavyItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		18AE5B8721A6A24800A57419 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-RegularItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		18AE5B8821A6A24800A57419 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		18AE5B8921A6A24800A57419 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Semibold.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		18AE5B8A21A6A24800A57419 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		18AE5B8B21A6A24800A57419 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-BoldItalic.otf"; path = "../../../../../../../../.Trash/SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		18AE5B9821A702E400A57419 /* GrecAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrecAnnotation.swift; sourceTree = "<group>"; };
+		18AE5BA021A7657300A57419 /* GradesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
 		18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E0F6F8EC6B23A83C6341135 /* Pods-Ios h3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.debug.xcconfig"; sourceTree = "<group>"; };
 		2ED7F32D9AC891995889994D /* Pods-Ios h3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,17 +110,39 @@
 				1888CC30219D85A60048B648 /* ViewController.swift */,
 				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
 				18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */,
+				18AE5B7321A6A17C00A57419 /* fonts */,
 				1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */,
 				1800BA9321A6143C00DCD7FC /* grecPageViewController.swift */,
 				1888CC32219D85A60048B648 /* Main.storyboard */,
 				1888CC35219D85A70048B648 /* Assets.xcassets */,
 				18278EC421A3008C00BD6B49 /* Grec.swift */,
+				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
 				A1F96D9921A573FD00BDAE3B /* MapViewController.swift */,
+				18AE5BA021A7657300A57419 /* GradesTableViewController.swift */,
 				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,
 				1888CC3A219D85A70048B648 /* Info.plist */,
 			);
 			path = "Ios h3";
+			sourceTree = "<group>";
+		};
+		18AE5B7321A6A17C00A57419 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18AE5B8A21A6A24800A57419 /* SF-Pro-Text-Bold.otf */,
+				18AE5B8B21A6A24800A57419 /* SF-Pro-Text-BoldItalic.otf */,
+				18AE5B8221A6A24800A57419 /* SF-Pro-Text-Heavy.otf */,
+				18AE5B8621A6A24800A57419 /* SF-Pro-Text-HeavyItalic.otf */,
+				18AE5B8421A6A24800A57419 /* SF-Pro-Text-Light.otf */,
+				18AE5B8021A6A24800A57419 /* SF-Pro-Text-LightItalic.otf */,
+				18AE5B8821A6A24800A57419 /* SF-Pro-Text-Medium.otf */,
+				18AE5B8121A6A24800A57419 /* SF-Pro-Text-MediumItalic.otf */,
+				18AE5B8521A6A24800A57419 /* SF-Pro-Text-Regular.otf */,
+				18AE5B8721A6A24800A57419 /* SF-Pro-Text-RegularItalic.otf */,
+				18AE5B8921A6A24800A57419 /* SF-Pro-Text-Semibold.otf */,
+				18AE5B8321A6A24800A57419 /* SF-Pro-Text-SemiboldItalic.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		8AFA5E80A650E666B002B5CB /* Pods */ = {
@@ -173,9 +223,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AE5B9421A6A24800A57419 /* SF-Pro-Text-Medium.otf in Resources */,
+				18AE5B8F21A6A24800A57419 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				18AE5B8D21A6A24800A57419 /* SF-Pro-Text-MediumItalic.otf in Resources */,
+				18AE5B8C21A6A24800A57419 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				1888CC39219D85A70048B648 /* LaunchScreen.storyboard in Resources */,
+				18AE5B9221A6A24800A57419 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				18AE5B9521A6A24800A57419 /* SF-Pro-Text-Semibold.otf in Resources */,
+				18AE5B8E21A6A24800A57419 /* SF-Pro-Text-Heavy.otf in Resources */,
+				18AE5B9021A6A24800A57419 /* SF-Pro-Text-Light.otf in Resources */,
+				18AE5B9121A6A24800A57419 /* SF-Pro-Text-Regular.otf in Resources */,
 				18C7ADD8219DAA920069F3D1 /* GoogleService-Info.plist in Resources */,
+				18AE5B9621A6A24800A57419 /* SF-Pro-Text-Bold.otf in Resources */,
 				1888CC36219D85A70048B648 /* Assets.xcassets in Resources */,
+				18AE5B9321A6A24800A57419 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				18AE5B9721A6A24800A57419 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				1888CC34219D85A60048B648 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,11 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1888CC31219D85A60048B648 /* ViewController.swift in Sources */,
+				18AE5BA121A7657300A57419 /* GradesTableViewController.swift in Sources */,
 				18278EBF21A2D90A00BD6B49 /* RankingViewController.swift in Sources */,
 				18278EC521A3008C00BD6B49 /* Grec.swift in Sources */,
 				1888CC2F219D85A60048B648 /* AppDelegate.swift in Sources */,
 				1800BA9421A6143C00DCD7FC /* grecPageViewController.swift in Sources */,
 				18278EC821A31CBE00BD6B49 /* FetchGrec.swift in Sources */,
+				18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */,
 				A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */,
 				1800BA9221A613E700DCD7FC /* GrecTableViewCell.swift in Sources */,
 			);

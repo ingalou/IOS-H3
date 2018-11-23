@@ -32,8 +32,7 @@ class GrecTableViewCell: UITableViewCell {
         let grey = UIColor(displayP3Red: 115/255, green: 115/255, blue: 115/255, alpha: 1.0)
         
         // Initialization code
-        grecTitle.font = UIFont.boldSystemFont(ofSize: 16.0)
-        grecTitle.font = UIFont.systemFont(ofSize: 17)
+        
         
         grecPlace.font = UIFont.systemFont(ofSize: 11)
         grecPlace.textColor = grey
@@ -54,6 +53,7 @@ class GrecTableViewCell: UITableViewCell {
         grecArrow.frame.size.height = grecArrow.frame.size.width
         grecArrow.layer.cornerRadius = grecArrow.frame.height/2
         
+
     }
     
     override func layoutSubviews() {
