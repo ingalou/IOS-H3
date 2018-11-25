@@ -8,12 +8,33 @@
 
 import UIKit
 
-class GrecPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class GrecPageViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var grecTitle: UILabel!
     @IBOutlet weak var moyenne: UILabel!
     @IBOutlet weak var adresse: UILabel!
+    
+    @IBOutlet weak var hygieneGrade: UILabel!
+    
+    @IBOutlet weak var viandeGrade: UILabel!
+    
+    @IBOutlet weak var fritesGrade: UILabel!
+    
+    @IBOutlet weak var sauceGrade: UILabel!
+    
+    @IBOutlet weak var cruditesGrade: UILabel!
+    
+    @IBOutlet weak var quantiteGrade: UILabel!
+   
+    @IBOutlet weak var qualitePrixGrade: UILabel!
+    
+    @IBOutlet weak var painGrade: UILabel!
+    
+    
+    
+
+    
 
     
 
@@ -23,9 +44,7 @@ class GrecPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
+        
         print("IDIDIDIDIDIIDDI\(id)")
         let fetchGrec = FetchGrec()
         fetchGrec.fetchId(id: id) { (grecsfromDB) in
@@ -36,29 +55,42 @@ class GrecPageViewController: UIViewController, UITableViewDelegate, UITableView
             self.adresse.text = self.grecs[0].address
             
         }
+        
+        
+        
+        let allGrades = [hygieneGrade, viandeGrade, fritesGrade, sauceGrade, cruditesGrade, quantiteGrade, qualitePrixGrade, painGrade]
+        
+        print(grecs)
+        
+        let red = UIColor(displayP3Red: 238/255, green: 101/255, blue: 101/255, alpha: 1.0)
+        
+        
+        var i = 0
+        while i < allGrades.count {
+            allGrades[i]!.textColor = red
+            allGrades[i]!.layer.borderWidth = 1
+            allGrades[i]!.layer.borderColor = red.cgColor
+            allGrades[i]!.frame.size.width = 24 + 10
+            allGrades[i]!.frame.size.height = allGrades[i]!.frame.size.width
+            allGrades[i]!.textAlignment = .center
+            allGrades[i]!.layer.cornerRadius = allGrades[i]!.frame.height/2
+            i = i + 1
+            
+            
+        }
+        
+        
+        
+        
+        
+
+    
+        
        
         
         
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gradesCell", for: indexPath) as! GrecGradesTableViewCell
-        
-        
-        
-        return cell
-
-        
-    }
-    
-    //hauteur de ligne
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
 
 }
