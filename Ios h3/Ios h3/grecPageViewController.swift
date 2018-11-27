@@ -10,7 +10,6 @@ import UIKit
 
 class GrecPageViewController: UIViewController{
     
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var grecTitle: UILabel!
     @IBOutlet weak var moyenne: UILabel!
     @IBOutlet weak var adresse: UILabel!
@@ -32,15 +31,47 @@ class GrecPageViewController: UIViewController{
     @IBOutlet weak var painGrade: UILabel!
     
     
+    @IBOutlet weak var like: UIButton!
     
 
+    @IBAction func addToFav(_ sender: UIButton) {
+        like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
+        
+        if favListArray.contains(self.grecTitle.text) {
+            
+            favListArray.remove(self.grecTitle.text)
+            
+        }else{
+            
+            favListArray.add(self.grecTitle.text)
+        }
+        
+        print("AAAAAAAAAAAAAAAA")
+//        print(self.grecTitle.text)
+//        print(favListArray)
+//        UserDefaults.standard.set(favListArray, forKey: "favList")
+//        print(UserDefaults.standard.object(forKey: "favList"))
+//        print(UserDefaults.standard.dictionaryRepresentation().keys);
+        
+    }
     
-
-    
-
-    
+    var favListArray:NSMutableArray = []
     var id: Int = 0
     var grecs: [Grec] = [Grec]()
+    
+    
+ func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+    if UserDefaults.standard.object(forKey: "favList") != nil {
+            
+        favListArray = NSMutableArray.init(array: UserDefaults.standard.object(forKey: "favList") as! NSMutableArray)
+            
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +87,18 @@ class GrecPageViewController: UIViewController{
             
         }
         
+        if favListArray.contains(self.grecTitle.text) {
+
+            like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
+
+        }else{
+
+            like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
+        }
+        
+        
+        
+       
         
         
         let allGrades = [hygieneGrade, viandeGrade, fritesGrade, sauceGrade, cruditesGrade, quantiteGrade, qualitePrixGrade, painGrade]
@@ -91,6 +134,6 @@ class GrecPageViewController: UIViewController{
         
         // Do any additional setup after loading the view.
     }
-    
+ 
 
 }

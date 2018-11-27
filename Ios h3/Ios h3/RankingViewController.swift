@@ -35,8 +35,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.reloadData()
             
         }
-        
-        
     }
     
     //nombre de lignes
@@ -73,13 +71,14 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 50
     }
     
+
     func tableView(_ tableView: UITableView, didSelectRowAt index: IndexPath) {
-//        print("SELECT : \(index.row)")
-//
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController")
-//
-//        navigationController?.pushViewController(detailViewController, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let grecPageViewController = storyboard.instantiateViewController(withIdentifier: "GrecPageViewController") as! GrecPageViewController
+        grecPageViewController.id = grecs[index.row].id
+        
+        navigationController?.pushViewController(grecPageViewController, animated: true)
     }
     
     

@@ -22,6 +22,8 @@
 		18AE5BA921AAED8C00A57419 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE5BA821AAED8C00A57419 /* circle.swift */; };
 		18C7ADD8219DAA920069F3D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */; };
 		A06F49FA6A3522D652BAF4CC /* Pods_Ios_h3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8CAA51F473E247EF14A1A8 /* Pods_Ios_h3.framework */; };
+		A1454B1F21AD529A00D2AD5A /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */; };
+		A1454B2121AD53BE00D2AD5A /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */; };
 		A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F96D9921A573FD00BDAE3B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		1E0F6F8EC6B23A83C6341135 /* Pods-Ios h3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.debug.xcconfig"; sourceTree = "<group>"; };
 		2ED7F32D9AC891995889994D /* Pods-Ios h3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios h3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3.release.xcconfig"; sourceTree = "<group>"; };
 		5C8CAA51F473E247EF14A1A8 /* Pods_Ios_h3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_h3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		A1F96D9921A573FD00BDAE3B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +97,10 @@
 				A1F96D9921A573FD00BDAE3B /* MapViewController.swift */,
 				18AE5BA421A8537000A57419 /* GrecPageViewController.swift */,
 				18AE5BA821AAED8C00A57419 /* circle.swift */,
+				A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */,
 				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
 				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
+				A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,
 				1888CC3A219D85A70048B648 /* Info.plist */,
 			);
@@ -261,9 +267,11 @@
 				18278EBF21A2D90A00BD6B49 /* RankingViewController.swift in Sources */,
 				18AE5BA921AAED8C00A57419 /* circle.swift in Sources */,
 				18278EC521A3008C00BD6B49 /* Grec.swift in Sources */,
+				A1454B1F21AD529A00D2AD5A /* FavouritesViewController.swift in Sources */,
 				1888CC2F219D85A60048B648 /* AppDelegate.swift in Sources */,
 				18AE5BA521A8537000A57419 /* GrecPageViewController.swift in Sources */,
 				18278EC821A31CBE00BD6B49 /* FetchGrec.swift in Sources */,
+				A1454B2121AD53BE00D2AD5A /* FavouriteTableViewCell.swift in Sources */,
 				18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */,
 				A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */,
 				18AE5BA321A84C9800A57419 /* ViewController.swift in Sources */,
