@@ -35,24 +35,26 @@ class GrecPageViewController: UIViewController{
     
 
     @IBAction func addToFav(_ sender: UIButton) {
-        like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
         
-        if favListArray.contains(self.grecTitle.text) {
+        if favListArray.contains(self.grecs[0].id) {
             
-            favListArray.remove(self.grecTitle.text)
+            favListArray.remove(self.grecs[0].id)
             
         }else{
             
-            favListArray.add(self.grecTitle.text)
+            favListArray.add(self.grecs[0].id)
         }
         
         print("AAAAAAAAAAAAAAAA")
 //        print(self.grecTitle.text)
 //        print(favListArray)
 //        UserDefaults.standard.set(favListArray, forKey: "favList")
-//        print(UserDefaults.standard.object(forKey: "favList"))
-//        print(UserDefaults.standard.dictionaryRepresentation().keys);
-        
+
+        UserDefaults.standard.set(favListArray, forKey: "favList")
+
+        print(favListArray)
+        print(UserDefaults.standard.object(forKey: "favList"))
+        print(UserDefaults.standard.dictionaryRepresentation().keys)
     }
     
     var favListArray:NSMutableArray = []
@@ -60,17 +62,7 @@ class GrecPageViewController: UIViewController{
     var grecs: [Grec] = [Grec]()
     
     
- func viewWillAppear(animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-    if UserDefaults.standard.object(forKey: "favList") != nil {
-            
-        favListArray = NSMutableArray.init(array: UserDefaults.standard.object(forKey: "favList") as! NSMutableArray)
-            
-        }
-        
-    }
+
     
     
     override func viewDidLoad() {
@@ -85,17 +77,29 @@ class GrecPageViewController: UIViewController{
             self.moyenne.text = String(format: "%0.1f", self.grecs[0].moyenne)
             self.adresse.text = self.grecs[0].address
             
+            if UserDefaults.standard.object(forKey: "favList") != nil {
+
+                self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
+                
+                print("BBBBBBBBB")
+                print(self.favListArray)
+                
+            }
+            if self.favListArray.contains(self.grecs[0].id) {
+                
+                self.like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
+                
+            }else{
+                
+                self.like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
+            }
+            
         }
         
-        if favListArray.contains(self.grecTitle.text) {
-
-            like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
-
-        }else{
-
-            like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
-        }
+       
         
+        
+       
         
         
        
