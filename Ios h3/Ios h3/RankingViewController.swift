@@ -34,6 +34,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.grecs = grecsfromDB
             self.tableView.reloadData()
             
+            
         }
     }
     

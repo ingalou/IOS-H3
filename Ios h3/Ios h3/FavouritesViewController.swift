@@ -15,24 +15,14 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-     var favListArray:NSMutableArray = []
+    var favListArray:NSMutableArray = []
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        if UserDefaults.standard.object(forKey: "favList") != nil {
-            
-            self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
-            
-            print("BBBBBBBBB")
-            print(self.favListArray)
-            self.tableView.reloadData()
-            
-        }
-        
-    }
     var grecs: [Grec] = [Grec]()
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,59 +31,63 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         
         let fetchGrec = FetchGrec()
-        fetchGrec.fetch { (grecsfromDB) in
+        fetchGrec.fetchFav { (grecsfromDB) in
             self.grecs = grecsfromDB
+            
+            
+            
+            if UserDefaults.standard.object(forKey: "favList") != nil {
+                
+                self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
+                
+                print("BBBBBBBBB")
+                print(self.favListArray)
+                
+            }
             self.tableView.reloadData()
             
+            
         }
+        
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favList.count
+        return favListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favouriteCell", for: indexPath) as! FavouriteTableViewCell
+        print("CCCCC")
+        print(favListArray[indexPath.row] as! Int)
+        print(grecs[favListArray[indexPath.row] as! Int].title)
+        print("AAPAPAP")
+        print(grecs[94].title)
         
-        cell.textLabel?.text = favList.object(at: indexPath.row) as? String
-        
+        cell.grecTitle.text = grecs[favListArray[indexPath.row] as! Int - 1].title
+        cell.grecPlace.text = grecs[favListArray[indexPath.row]as! Int - 1].city
+        cell.grecGrade.text = grecs[favListArray[indexPath.row]as! Int - 1].moyenne.description
+        cell.grecArrow.layer.cornerRadius = cell.grecArrow.frame.height/2
+        cell.grecArrow.clipsToBounds = true
+        cell.grecArrow.setTitleColor(UIColor.red, for: [])
+        cell.grecArrow.layer.borderWidth = 1
+        cell.grecArrow.layer.borderColor = UIColor.red.cgColor
+        cell.grecArrow.frame.size.width = cell.grecArrow.intrinsicContentSize.width + 10
+        cell.grecArrow.frame.size.height = cell.grecArrow.frame.size.width
+    
         return cell
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
-}
-//
-//  FavouritesTableViewCell.swift
-//  Ios h3
-//
-//  Created by julie Coustenoble on 26/11/2018.
-//  Copyright © 2018 Ingal Prudente Cornier. All rights reserved.
-//
-
-import UIKit
-
-class FavouritesTableViewCell: UITableViewCell {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func tableView(_ tableView: UITableView, didSelectRowAt index: IndexPath) {
         
-        // Configure the view for the selected state
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let grecPageViewController = storyboard.instantiateViewController(withIdentifier: "GrecPageViewController") as! GrecPageViewController
+        grecPageViewController.id = grecs[favListArray[index.row] as! Int - 1].id
+        
+        navigationController?.pushViewController(grecPageViewController, animated: true)
     }
+    
     
 }

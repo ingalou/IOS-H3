@@ -55,6 +55,7 @@ class GrecPageViewController: UIViewController{
         print(favListArray)
         print(UserDefaults.standard.object(forKey: "favList"))
         print(UserDefaults.standard.dictionaryRepresentation().keys)
+        
     }
     
     var favListArray:NSMutableArray = []

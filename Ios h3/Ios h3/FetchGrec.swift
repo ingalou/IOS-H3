@@ -52,6 +52,27 @@ class FetchGrec: NSObject {
             
         }
     }
+    
+    func fetchFav(completionHandler: @escaping ([Grec])->Void ){
+        let db = Firestore.firestore()
+        var grecs: [Grec] = [Grec]()
+        
+        
+        db.collection("kebabs").order(by: "ID", descending: false).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let dictio = document.data()
+                    let grec = Grec(dico: dictio)
+                    grecs.append(grec)
+                    
+                }
+            }
+            completionHandler(grecs)
+            
+        }
+    }
 
 }
     
