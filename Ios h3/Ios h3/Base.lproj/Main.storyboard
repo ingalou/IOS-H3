@@ -47,7 +47,7 @@
         <scene sceneID="QxV-9L-bt1">
             <objects>
                 <navigationController id="3FB-lK-SpE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoris" id="dS5-pm-Khp"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" image="favoris" selectedImage="favoris" id="dS5-pm-Khp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h69-eX-EFi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -233,7 +233,7 @@
         <scene sceneID="kIh-JC-mtd">
             <objects>
                 <navigationController id="VfI-AQ-vs6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="lFs-BM-XxR"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="carte" selectedImage="carte" id="lFs-BM-XxR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JiL-hg-xXv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -577,7 +577,7 @@
         <scene sceneID="87R-hV-lLF">
             <objects>
                 <navigationController id="M2I-wc-0tK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Classement" image="kebabGrise" id="krE-d9-iog"/>
+                    <tabBarItem key="tabBarItem" title="Classement" image="kebab" selectedImage="kebab" id="krE-d9-iog"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpY-Uv-hJ3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -636,13 +636,21 @@
                                                     </constraints>
                                                     <state key="normal" title="&gt;"/>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="57U-2q-sjX">
+                                                    <rect key="frame" x="274.5" y="5.5" width="29" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="AH2-mI-yAn"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="57U-2q-sjX" firstAttribute="centerX" secondItem="UCp-Eo-09U" secondAttribute="centerX" id="4Zo-C7-SNS"/>
                                                 <constraint firstAttribute="trailing" secondItem="PIl-SJ-kt7" secondAttribute="trailing" constant="23" id="7FJ-Rg-JcZ"/>
                                                 <constraint firstItem="PDO-rh-0sH" firstAttribute="leading" secondItem="6EU-VG-1yN" secondAttribute="trailing" constant="20" id="Gvg-i1-fI4"/>
                                                 <constraint firstItem="6EU-VG-1yN" firstAttribute="centerY" secondItem="P3h-B4-49W" secondAttribute="centerY" id="IXt-ed-ZBm"/>
                                                 <constraint firstItem="PIl-SJ-kt7" firstAttribute="leading" secondItem="UCp-Eo-09U" secondAttribute="trailing" constant="21" id="R84-Da-mx0"/>
                                                 <constraint firstItem="UCp-Eo-09U" firstAttribute="centerY" secondItem="P3h-B4-49W" secondAttribute="centerY" id="Vyq-Le-ZNG"/>
+                                                <constraint firstItem="57U-2q-sjX" firstAttribute="centerY" secondItem="UCp-Eo-09U" secondAttribute="centerY" id="W1G-dS-zmC"/>
                                                 <constraint firstItem="6EU-VG-1yN" firstAttribute="leading" secondItem="P3h-B4-49W" secondAttribute="leading" constant="36" id="exW-le-8NJ"/>
                                                 <constraint firstItem="PDO-rh-0sH" firstAttribute="bottom" secondItem="6EU-VG-1yN" secondAttribute="bottom" id="g3T-pt-weo"/>
                                                 <constraint firstItem="PIl-SJ-kt7" firstAttribute="centerY" secondItem="P3h-B4-49W" secondAttribute="centerY" id="mUz-4G-VPI"/>
@@ -689,10 +697,12 @@
         <scene sceneID="ft1-W9-V3j">
             <objects>
                 <tabBarController id="4j6-cb-QvD" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4D2-l8-WAg">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="4D2-l8-WAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.93431884050000003" green="0.39445757869999998" blue="0.39425340289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -709,8 +719,10 @@
     <resources>
         <image name="Ellipse 2" width="29" height="29"/>
         <image name="EllipsePleine 2" width="119" height="119"/>
+        <image name="carte" width="30" height="30"/>
+        <image name="favoris" width="30" height="30"/>
         <image name="heart-empty" width="236" height="236"/>
-        <image name="kebabGrise" width="133" height="323"/>
+        <image name="kebab" width="30" height="30"/>
         <image name="logo_aygun2" width="400" height="550"/>
     </resources>
 </document>
