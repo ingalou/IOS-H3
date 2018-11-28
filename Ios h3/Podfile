@@ -8,6 +8,7 @@ target 'Ios h3' do
   # Pods for Ios h3
 	pod 'Firebase/Core'
     pod 'Firebase/Firestore'
+    pod 'Eureka'
 end
 
 

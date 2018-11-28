@@ -24,6 +24,7 @@
 		A1454B1F21AD529A00D2AD5A /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */; };
 		A1454B2121AD53BE00D2AD5A /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */; };
 		A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F96D9921A573FD00BDAE3B /* MapViewController.swift */; };
+		E94E468D21AEBF07009A7E7D /* EurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E468C21AEBF07009A7E7D /* EurekaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		A1F96D9921A573FD00BDAE3B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E94E468C21AEBF07009A7E7D /* EurekaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				18AE5BA421A8537000A57419 /* GrecPageViewController.swift */,
 				A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */,
 				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
+				E94E468C21AEBF07009A7E7D /* EurekaViewController.swift */,
 				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
 				A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,
@@ -202,6 +205,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ios h3/Pods-Ios h3-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -217,6 +221,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -270,6 +275,7 @@
 				A1454B2121AD53BE00D2AD5A /* FavouriteTableViewCell.swift in Sources */,
 				18AE5B9921A702E400A57419 /* GrecAnnotation.swift in Sources */,
 				A1F96D9A21A573FD00BDAE3B /* MapViewController.swift in Sources */,
+				E94E468D21AEBF07009A7E7D /* EurekaViewController.swift in Sources */,
 				18AE5BA321A84C9800A57419 /* ViewController.swift in Sources */,
 				1800BA9221A613E700DCD7FC /* GrecTableViewCell.swift in Sources */,
 			);

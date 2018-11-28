@@ -311,6 +311,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-jN-dnn">
                                 <rect key="frame" x="60" y="492" width="126" height="30"/>
                                 <state key="normal" title="Ajoutez votre grec"/>
+                                <connections>
+                                    <segue destination="naF-Sx-jQd" kind="popoverPresentation" popoverAnchorView="gZQ-jN-dnn" id="Wcb-Lf-L9f">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -387,6 +392,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rnk-gB-FQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2656.8000000000002" y="778.56071964017997"/>
+        </scene>
+        <!--Eureka View Controller-->
+        <scene sceneID="uUF-XX-hyU">
+            <objects>
+                <viewController id="naF-Sx-jQd" customClass="EurekaViewController" customModule="Ios_h3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yq3-Jg-BiD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Qw-Ai-W9n"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OV-Dv-UkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3401" y="779"/>
         </scene>
         <!--Classement-->
         <scene sceneID="87R-hV-lLF">
