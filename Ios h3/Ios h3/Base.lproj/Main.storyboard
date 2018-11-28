@@ -150,6 +150,85 @@
             </objects>
             <point key="canvasLocation" x="1925.5999999999999" y="1549.4752623688157"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EfD-dI-zUV">
+            <objects>
+                <viewController id="KWb-AT-jkt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VU3-kD-0mZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AYGÜN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKJ-ZH-X4i">
+                                <rect key="frame" x="146" y="202" width="83" height="61"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_aygun2" translatesAutoresizingMaskIntoConstraints="NO" id="Esi-YK-LIg">
+                                <rect key="frame" x="149" y="77" width="76" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rQF-NF-hYO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qui sommes nous ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-uL-8Iu">
+                                <rect key="frame" x="33" y="291" width="218" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh9-vI-EIC">
+                                <rect key="frame" x="33" y="350" width="309" height="134"/>
+                                <string key="text">Aygün est un label de critique de grecs en île de France. Nous sommes 6 parisiens amateurs de bonne graisse qui souhaite apporter leur expertise afin de vous faire profiter des bons plans. Pour l'instant seul Paris et Montreuil sont desservies pas l'app mais nous souhaitons à long terme nous implanter sur toute l’Île de France .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-Uv-eGm">
+                                <rect key="frame" x="49" y="520" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+33 6 04 53 43 71" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7f-2P-re6">
+                                <rect key="frame" x="49" y="558" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="aygun@grecmail.fr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-Kw-B2O">
+                                <rect key="frame" x="49" y="587" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pin-cp-aQc" firstAttribute="trailing" secondItem="Eh9-vI-EIC" secondAttribute="trailing" constant="33" id="4tf-4F-fde"/>
+                            <constraint firstItem="Pin-cp-aQc" firstAttribute="trailing" secondItem="Esi-YK-LIg" secondAttribute="trailing" constant="150" id="6hf-PO-NFI"/>
+                            <constraint firstItem="6SD-Uv-eGm" firstAttribute="top" secondItem="Eh9-vI-EIC" secondAttribute="bottom" constant="40" id="CM0-ca-OP1"/>
+                            <constraint firstItem="k7f-2P-re6" firstAttribute="leading" secondItem="6SD-Uv-eGm" secondAttribute="leading" id="CZD-wQ-r6h"/>
+                            <constraint firstItem="h5w-uL-8Iu" firstAttribute="top" secondItem="rKJ-ZH-X4i" secondAttribute="bottom" constant="60" id="I87-8E-eX5"/>
+                            <constraint firstItem="Esi-YK-LIg" firstAttribute="top" secondItem="Pin-cp-aQc" secondAttribute="top" constant="13" id="NjA-OY-19i"/>
+                            <constraint firstItem="6SD-Uv-eGm" firstAttribute="leading" secondItem="Eh9-vI-EIC" secondAttribute="leading" id="P4I-iu-9oH"/>
+                            <constraint firstItem="rKJ-ZH-X4i" firstAttribute="centerX" secondItem="VU3-kD-0mZ" secondAttribute="centerX" id="SH8-rl-oIX"/>
+                            <constraint firstItem="Eh9-vI-EIC" firstAttribute="leading" secondItem="h5w-uL-8Iu" secondAttribute="leading" id="bjk-yQ-qLu"/>
+                            <constraint firstItem="k7f-2P-re6" firstAttribute="top" secondItem="6SD-Uv-eGm" secondAttribute="bottom" constant="10" id="dVa-MA-T6T"/>
+                            <constraint firstItem="Eh9-vI-EIC" firstAttribute="top" secondItem="h5w-uL-8Iu" secondAttribute="bottom" constant="30" id="hJh-Yu-j5B"/>
+                            <constraint firstItem="Esi-YK-LIg" firstAttribute="leading" secondItem="Pin-cp-aQc" secondAttribute="leading" constant="149" id="j2Z-AF-UB4"/>
+                            <constraint firstItem="h5w-uL-8Iu" firstAttribute="leading" secondItem="Pin-cp-aQc" secondAttribute="leading" constant="33" id="uCh-18-ceK"/>
+                            <constraint firstItem="rKJ-ZH-X4i" firstAttribute="top" secondItem="Esi-YK-LIg" secondAttribute="bottom" constant="25" id="wnP-p6-yfo"/>
+                            <constraint firstItem="Esi-YK-LIg" firstAttribute="top" secondItem="Pin-cp-aQc" secondAttribute="top" constant="13" id="xVN-oB-twZ"/>
+                            <constraint firstItem="Pr1-Kw-B2O" firstAttribute="top" secondItem="k7f-2P-re6" secondAttribute="bottom" constant="10" id="xjx-cm-6ky"/>
+                            <constraint firstItem="Pr1-Kw-B2O" firstAttribute="leading" secondItem="k7f-2P-re6" secondAttribute="leading" id="zma-Bp-YOl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pin-cp-aQc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOe-KE-PEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656.8000000000002" y="2163.8680659670167"/>
+        </scene>
         <!--Map-->
         <scene sceneID="kIh-JC-mtd">
             <objects>
@@ -317,6 +396,17 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ay-iq-CZW">
+                                <rect key="frame" x="49" y="556" width="30" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" red="0.92941176469999998" green="0.48627450979999998" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLabelPage:" destination="An7-Fg-568" eventType="touchUpInside" id="zdO-hp-gnN"/>
+                                    <segue destination="KWb-AT-jkt" kind="show" id="evB-HQ-jYK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -340,6 +430,7 @@
                             <constraint firstItem="GAz-NQ-xr6" firstAttribute="centerX" secondItem="2nR-SN-RIa" secondAttribute="centerX" id="F6B-DY-diz"/>
                             <constraint firstItem="8Gg-wR-1Vn" firstAttribute="top" secondItem="uaR-fW-YWs" secondAttribute="bottom" constant="12" id="GXC-us-i33"/>
                             <constraint firstItem="lX9-1c-s9v" firstAttribute="top" secondItem="Bky-xw-aAM" secondAttribute="bottom" constant="9" id="JNI-py-fgH"/>
+                            <constraint firstItem="6ay-iq-CZW" firstAttribute="centerY" secondItem="hVH-Im-oTh" secondAttribute="centerY" id="K2Z-fT-HVo"/>
                             <constraint firstItem="Npe-Ik-WNY" firstAttribute="leading" secondItem="2DT-6M-GNO" secondAttribute="leading" id="M3k-tB-Hn7"/>
                             <constraint firstItem="Knz-Z8-rXc" firstAttribute="leading" secondItem="2nR-SN-RIa" secondAttribute="leading" constant="60" id="MnM-CQ-k0i"/>
                             <constraint firstItem="2nR-SN-RIa" firstAttribute="trailing" secondItem="ktm-R3-0XX" secondAttribute="trailing" constant="60" id="MsU-M9-PAW"/>
@@ -371,6 +462,7 @@
                             <constraint firstItem="2nR-SN-RIa" firstAttribute="trailing" secondItem="SFj-bT-OGd" secondAttribute="trailing" constant="40" id="ryC-lF-8hd"/>
                             <constraint firstItem="J1F-ZN-KN6" firstAttribute="leading" secondItem="CyP-j3-7uv" secondAttribute="leading" id="sqL-oV-pUj"/>
                             <constraint firstItem="fMf-R9-35F" firstAttribute="firstBaseline" secondItem="lX9-1c-s9v" secondAttribute="firstBaseline" id="tEi-mJ-MYf"/>
+                            <constraint firstItem="6ay-iq-CZW" firstAttribute="leading" secondItem="gZQ-jN-dnn" secondAttribute="leading" id="x4b-zx-ijM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2nR-SN-RIa"/>
                     </view>
@@ -544,5 +636,6 @@
     <resources>
         <image name="heart-empty" width="236" height="236"/>
         <image name="kebabGrise" width="133" height="323"/>
+        <image name="logo_aygun2" width="400" height="550"/>
     </resources>
 </document>
