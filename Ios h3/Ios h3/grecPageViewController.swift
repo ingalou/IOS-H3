@@ -36,6 +36,7 @@ class GrecPageViewController: UIViewController{
 
     @IBAction func addToFav(_ sender: UIButton) {
         
+        
         if favListArray.contains(self.grecs[0].id) {
             
             favListArray.remove(self.grecs[0].id)
@@ -43,6 +44,14 @@ class GrecPageViewController: UIViewController{
         }else{
             
             favListArray.add(self.grecs[0].id)
+        }
+        if self.favListArray.contains(self.grecs[0].id) {
+            
+            self.like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
+            
+        }else{
+            
+            self.like.setImage(UIImage(named: "heart-empty"), for: UIControl.State.normal)
         }
         
         print("AAAAAAAAAAAAAAAA")
@@ -80,6 +89,15 @@ class GrecPageViewController: UIViewController{
             self.moyenne.text = String(format: "%0.1f", self.grecs[0].moyenne)
             self.adresse.text = self.grecs[0].address
             
+            self.hygieneGrade.text = "\(self.grecs[0].hygiene)"
+            self.viandeGrade.text = "\(self.grecs[0].viande)"
+            self.fritesGrade.text = "\(self.grecs[0].frite)"
+            self.sauceGrade.text = "\(self.grecs[0].sauce)"
+            self.cruditesGrade.text = "\(self.grecs[0].crudite)"
+            self.quantiteGrade.text = "\(self.grecs[0].quantite)"
+            self.qualitePrixGrade.text = "\(self.grecs[0].qualitePrix)"
+            self.painGrade.text = "\(self.grecs[0].pain)"
+            
             if UserDefaults.standard.object(forKey: "favList") != nil {
 
                 self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
@@ -90,11 +108,11 @@ class GrecPageViewController: UIViewController{
             }
             if self.favListArray.contains(self.grecs[0].id) {
                 
-                self.like.setImage(UIImage(named: "logo_aygun2"), for: UIControl.State.normal)
+                self.like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
                 
             }else{
                 
-                self.like.setImage(UIImage(named: "heart-full"), for: UIControl.State.normal)
+                self.like.setImage(UIImage(named: "heart-empty"), for: UIControl.State.normal)
             }
             
         }

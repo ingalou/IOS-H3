@@ -64,7 +64,7 @@ class Grec: NSObject {
         if let pain = dico["Pain"] as? Int {
             self.pain = pain
         }
-        if let crudite = dico["crudite"] as? Int {
+        if let crudite = dico["Crudites"] as? Int {
             self.crudite = crudite
         }
         if let quantite = dico["Quantite"] as? Int {
