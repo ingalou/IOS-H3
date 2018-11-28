@@ -412,7 +412,7 @@
         <scene sceneID="87R-hV-lLF">
             <objects>
                 <navigationController id="M2I-wc-0tK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Classement" id="krE-d9-iog"/>
+                    <tabBarItem key="tabBarItem" title="Classement" image="kebabGrise" id="krE-d9-iog"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpY-Uv-hJ3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -543,5 +543,6 @@
     </scenes>
     <resources>
         <image name="heart-empty" width="236" height="236"/>
+        <image name="kebabGrise" width="133" height="323"/>
     </resources>
 </document>
