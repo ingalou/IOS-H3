@@ -69,6 +69,8 @@ class GrecPageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         print("IDIDIDIDIDIIDDI\(id)")
         let fetchGrec = FetchGrec()
         fetchGrec.fetchId(id: id) { (grecsfromDB) in
@@ -96,43 +98,6 @@ class GrecPageViewController: UIViewController{
             }
             
         }
-        
-       
-        
-        
-       
-        
-        
-       
-        
-        
-        let allGrades = [hygieneGrade, viandeGrade, fritesGrade, sauceGrade, cruditesGrade, quantiteGrade, qualitePrixGrade, painGrade]
-        
-        print(grecs)
-        
-        let red = UIColor(displayP3Red: 238/255, green: 101/255, blue: 101/255, alpha: 1.0)
-        
-        
-        var i = 0
-        while i < allGrades.count {
-            allGrades[i]!.textColor = red
-            allGrades[i]!.layer.borderWidth = 1
-            allGrades[i]!.layer.borderColor = red.cgColor
-            allGrades[i]!.frame.size.width = 24 + 10
-            allGrades[i]!.frame.size.height = allGrades[i]!.frame.size.width
-            allGrades[i]!.textAlignment = .center
-            allGrades[i]!.layer.cornerRadius = allGrades[i]!.frame.height/2
-            i = i + 1
-            
-            
-        }
-        
-        
-        
-        
-        
-
-    
         
        
         

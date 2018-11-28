@@ -21,7 +21,27 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     
 
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        print("viewwillappear")
+        
+        super.viewWillAppear(animated)
+        let fetchGrec = FetchGrec()
+        fetchGrec.fetchFav { (grecsfromDB) in
+            self.grecs = grecsfromDB
+            if UserDefaults.standard.object(forKey: "favList") != nil {
+                
+                self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
+                
+                print("BBBBBBBBB")
+                print(self.favListArray)
+                 self.tableView.reloadData()
+                
+            }
+           
+
+            
+        }
+        
+       
     }
     
     override func viewDidLoad() {
@@ -30,24 +50,7 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
-        let fetchGrec = FetchGrec()
-        fetchGrec.fetchFav { (grecsfromDB) in
-            self.grecs = grecsfromDB
-            
-            
-            
-            if UserDefaults.standard.object(forKey: "favList") != nil {
-                
-                self.favListArray = NSMutableArray.init(array: (UserDefaults.standard.object(forKey: "favList") as! NSArray).mutableCopy() as! NSMutableArray)
-                
-                print("BBBBBBBBB")
-                print(self.favListArray)
-                
-            }
-            self.tableView.reloadData()
-            
-            
-        }
+       
         
         
     }
