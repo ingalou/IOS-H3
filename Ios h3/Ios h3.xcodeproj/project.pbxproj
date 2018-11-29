@@ -92,6 +92,10 @@
 		1805A73221AFF83B00AF8EEE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
+				1888CC2E219D85A60048B648 /* AppDelegate.swift */,
+				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
+				18278EC421A3008C00BD6B49 /* Grec.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -119,10 +123,6 @@
 			children = (
 				1888CC35219D85A70048B648 /* Assets.xcassets */,
 				1805A73221AFF83B00AF8EEE /* model */,
-				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
-				1888CC2E219D85A60048B648 /* AppDelegate.swift */,
-				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
-				18278EC421A3008C00BD6B49 /* Grec.swift */,
 				1805A73121AFF80B00AF8EEE /* View */,
 				1805A73021AFF79E00AF8EEE /* Controller */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,

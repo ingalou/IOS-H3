@@ -35,11 +35,18 @@
                         <color key="badgeColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="4Un-BO-DKQ">
-                        <barButtonItem key="rightBarButtonItem" title="?" id="l1M-M5-M5n">
-                            <connections>
-                                <segue destination="KWb-AT-jkt" kind="show" id="b77-CC-sVJ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="?" id="l1M-M5-M5n">
+                                <connections>
+                                    <segue destination="KWb-AT-jkt" kind="show" id="b77-CC-sVJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="Gqb-ip-Xsc">
+                                <connections>
+                                    <segue destination="naF-Sx-jQd" kind="presentation" id="qya-9q-0ve"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Iqr-kO-tHK" id="J9G-Za-tgQ"/>
@@ -408,11 +415,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-jN-dnn">
                                 <rect key="frame" x="60" y="552.5" width="126" height="30"/>
                                 <state key="normal" title="Ajoutez votre grec"/>
-                                <connections>
-                                    <segue destination="naF-Sx-jQd" kind="popoverPresentation" popoverAnchorView="gZQ-jN-dnn" id="Wcb-Lf-L9f">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="5uC-u1-bj8">
                                 <rect key="frame" x="275" y="234" width="56" height="26"/>
@@ -547,6 +549,9 @@
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="Y2f-wg-X5S">
                                 <inset key="imageInsets" minX="0.0" minY="0.0" maxX="13" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="naF-Sx-jQd" kind="presentation" id="Bsg-Sn-3td"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -706,11 +711,18 @@
                         <viewLayoutGuide key="safeArea" id="aF9-vu-rWn"/>
                     </view>
                     <navigationItem key="navigationItem" id="3aF-Qk-HVm">
-                        <barButtonItem key="rightBarButtonItem" title="?" id="dlB-yt-zq0">
-                            <connections>
-                                <segue destination="KWb-AT-jkt" kind="show" id="Qo3-uL-QYH"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="?" id="dlB-yt-zq0">
+                                <connections>
+                                    <segue destination="KWb-AT-jkt" kind="show" id="Qo3-uL-QYH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="PEi-F7-d5l">
+                                <connections>
+                                    <segue destination="naF-Sx-jQd" kind="presentation" id="GLQ-3l-xDw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="R8i-0h-b2Z" id="15a-Fr-284"/>
@@ -772,6 +784,7 @@
         <image name="logo_aygun2" width="400" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qo3-uL-QYH"/>
+        <segue reference="qya-9q-0ve"/>
+        <segue reference="b77-CC-sVJ"/>
     </inferredMetricsTieBreakers>
 </document>
