@@ -65,6 +65,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1805A73021AFF79E00AF8EEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */,
+				18AE5BA421A8537000A57419 /* GrecPageViewController.swift */,
+				18AE5BA221A84C9800A57419 /* ViewController.swift */,
+				A1F96D9921A573FD00BDAE3B /* MapViewController.swift */,
+				E94E468C21AEBF07009A7E7D /* EurekaViewController.swift */,
+				A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1805A73121AFF80B00AF8EEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1888CC32219D85A60048B648 /* Main.storyboard */,
+				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
+				1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */,
+				A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1805A73221AFF83B00AF8EEE /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		1888CC22219D85A60048B648 = {
 			isa = PBXGroup;
 			children = (
@@ -86,21 +117,14 @@
 		1888CC2D219D85A60048B648 /* Ios h3 */ = {
 			isa = PBXGroup;
 			children = (
+				1888CC35219D85A70048B648 /* Assets.xcassets */,
+				1805A73221AFF83B00AF8EEE /* model */,
+				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
 				1888CC2E219D85A60048B648 /* AppDelegate.swift */,
 				18278EC721A31CBE00BD6B49 /* FetchGrec.swift */,
-				18278EBE21A2D90A00BD6B49 /* RankingViewController.swift */,
-				1800BA9121A613E700DCD7FC /* GrecTableViewCell.swift */,
-				18AE5BA221A84C9800A57419 /* ViewController.swift */,
-				1888CC32219D85A60048B648 /* Main.storyboard */,
-				1888CC35219D85A70048B648 /* Assets.xcassets */,
 				18278EC421A3008C00BD6B49 /* Grec.swift */,
-				A1F96D9921A573FD00BDAE3B /* MapViewController.swift */,
-				18AE5BA421A8537000A57419 /* GrecPageViewController.swift */,
-				A1454B2021AD53BE00D2AD5A /* FavouriteTableViewCell.swift */,
-				18AE5B9821A702E400A57419 /* GrecAnnotation.swift */,
-				E94E468C21AEBF07009A7E7D /* EurekaViewController.swift */,
-				1888CC37219D85A70048B648 /* LaunchScreen.storyboard */,
-				A1454B1E21AD529A00D2AD5A /* FavouritesViewController.swift */,
+				1805A73121AFF80B00AF8EEE /* View */,
+				1805A73021AFF79E00AF8EEE /* Controller */,
 				18C7ADD7219DAA920069F3D1 /* GoogleService-Info.plist */,
 				1888CC3A219D85A70048B648 /* Info.plist */,
 			);
