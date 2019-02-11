@@ -183,6 +183,7 @@ class EurekaViewController: FormViewController {
                                     "Longitude" : values["longitudeRow"],
                                     "Crudites" : values["cruditesRow"],
                                     "Ville" : values["cityRow"],
+                                    "Adresse" : values["addressRow"],
                                     "Sauces" : values["sauceRow"],
                                     "Viandes" : values["viandeRow"],
                                     "Frites" : values["friteRow"],
